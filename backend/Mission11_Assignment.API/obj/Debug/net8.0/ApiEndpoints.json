@@ -16,6 +16,11 @@
         "Name": "pageNum",
         "Type": "System.Int32",
         "IsRequired": false
+      },
+      {
+        "Name": "sortOrder",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

@@ -52,6 +52,7 @@ C:\Users\grace\Documents\BYU\IS Jr core Winter\ASP.net\Mission11Assignment\backe
 C:\Users\grace\Documents\BYU\IS Jr core Winter\ASP.net\Mission11Assignment\backend\Mission11_Assignment.API\obj\Debug\net8.0\Mission11_Assignment.API.csproj.CoreCompileInputs.cache
 C:\Users\grace\Documents\BYU\IS Jr core Winter\ASP.net\Mission11Assignment\backend\Mission11_Assignment.API\obj\Debug\net8.0\Mission11_Assignment.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\grace\Documents\BYU\IS Jr core Winter\ASP.net\Mission11Assignment\backend\Mission11_Assignment.API\obj\Debug\net8.0\Mission11_Assignment.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\grace\Documents\BYU\IS Jr core Winter\ASP.net\Mission11Assignment\backend\Mission11_Assignment.API\obj\Debug\net8.0\Mission11_Assignment.API.sourcelink.json
 C:\Users\grace\Documents\BYU\IS Jr core Winter\ASP.net\Mission11Assignment\backend\Mission11_Assignment.API\obj\Debug\net8.0\scopedcss\bundle\Mission11_Assignment.API.styles.css
 C:\Users\grace\Documents\BYU\IS Jr core Winter\ASP.net\Mission11Assignment\backend\Mission11_Assignment.API\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\grace\Documents\BYU\IS Jr core Winter\ASP.net\Mission11Assignment\backend\Mission11_Assignment.API\obj\Debug\net8.0\staticwebassets.development.json
@@ -68,4 +69,3 @@ C:\Users\grace\Documents\BYU\IS Jr core Winter\ASP.net\Mission11Assignment\backe
 C:\Users\grace\Documents\BYU\IS Jr core Winter\ASP.net\Mission11Assignment\backend\Mission11_Assignment.API\obj\Debug\net8.0\Mission11_Assignment.API.pdb
 C:\Users\grace\Documents\BYU\IS Jr core Winter\ASP.net\Mission11Assignment\backend\Mission11_Assignment.API\obj\Debug\net8.0\Mission11_Assignment.API.genruntimeconfig.cache
 C:\Users\grace\Documents\BYU\IS Jr core Winter\ASP.net\Mission11Assignment\backend\Mission11_Assignment.API\obj\Debug\net8.0\ref\Mission11_Assignment.API.dll
-C:\Users\grace\Documents\BYU\IS Jr core Winter\ASP.net\Mission11Assignment\backend\Mission11_Assignment.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

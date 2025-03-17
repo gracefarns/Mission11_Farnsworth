@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Mission11_Assignment.API.Data;
+using System.Linq;
 
 namespace Mission11_Assignment.API.Controllers
 {
@@ -8,23 +9,35 @@ namespace Mission11_Assignment.API.Controllers
     [ApiController]
     public class BookController : ControllerBase
     {
-        private BookDbContext _bookContext;
+        private readonly BookDbContext _bookContext;
+
         public BookController(BookDbContext temp) => _bookContext = temp;
 
         [HttpGet]
-        public IActionResult GetBooks(int pageHowMany = 10, int pageNum = 1)
+        public IActionResult GetBooks(int pageHowMany = 5, int pageNum = 1, string sortOrder = "asc")
         {
-            var something = _bookContext.Books
-                .Skip((pageNum - 1) * pageHowMany)
+
+            var booksQuery = _bookContext.Books.AsQueryable();
+
+            // Sorting
+            booksQuery = sortOrder.ToLower() == "desc"
+                ? booksQuery.OrderByDescending(b => b.Title)
+                : booksQuery.OrderBy(b => b.Title);
+
+            // Get total count BEFORE pagination
+            int totalNumBooks = booksQuery.Count();
+
+            // Apply pagination AFTER sorting
+            var books = booksQuery
+                .Skip((pageNum - 1) * pageHowMany) 
                 .Take(pageHowMany)
                 .ToList();
-            var totalNumBooks = _bookContext.Books.Count();
-            var someObject = new
+
+            return Ok(new
             {
-                Books = something,
+                Books = books,
                 TotalNumBooks = totalNumBooks
-            };
-            return Ok(someObject);
+            });
         }
     }
 }
