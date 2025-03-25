@@ -7,5 +7,5 @@ export interface Book {
   classification: string;
   category: string;
   pageCount: number;
-  price: string;
+  price: number;
 }
