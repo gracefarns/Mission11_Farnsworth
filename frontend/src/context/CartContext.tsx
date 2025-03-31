@@ -2,7 +2,7 @@ import { createContext, ReactNode, useContext, useState } from "react";
 import { CartItem } from "../types/CartItem";
 
 interface CartContextType {
-  cart: (CartItem & { quantity: number })[]; // Add quantity to CartItem
+  cart: CartItem[]; // Add quantity to CartItem
   addToCart: (item: CartItem) => void;
   removeFromCart: (bookId: number) => void;
   clearCart: () => void;
@@ -20,7 +20,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
       if (existingItem) {
         // Increment quantity and update subtotal
         return prevCart.map((c) =>
-          c.bookId === item.bookId
+          c.bookId === Number(item.bookId)
             ? { ...c, quantity: c.quantity + 1 } // Increment quantity
             : c
         );
@@ -32,7 +32,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const removeFromCart = (bookId: number) => {
-    setCart((prevCart) => prevCart.filter((c) => c.bookId === bookId));
+    setCart((prevCart) => prevCart.filter((c) => c.bookId !== Number(bookId)));
   };
 
   const clearCart = () => {
