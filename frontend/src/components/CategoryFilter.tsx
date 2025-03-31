@@ -13,13 +13,10 @@ function CategoryFilter({
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch("https://localhost:5000/Book");
+        const response = await fetch("https://localhost:5000/Book/BookCategory");
         const data = await response.json();
         console.log("Fetched categories:", data);
-        const uniqueCategories: string[] = Array.from(
-          new Set(data.books.map((book: any) => book.category))
-        );
-        setCategories(uniqueCategories);
+        setCategories(data);
       } catch (error) {
         console.error("Error fetching categories", error);
       }
